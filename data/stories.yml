@@ -1,0 +1,82 @@
+version: "3.0"
+
+stories:
+
+- story: happy product intro 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_about_zoho_books
+
+- story: happy product intro 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_about_zoho_books_plead
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_about_zoho_books
+
+
+#  1. About the product
+#  2. Services avail
+#  3. Problems
+
+
+# ---- 1. About the product
+
+- story: happy about product 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_about_zoho_books
+  - action: utter_about_zoho_services
+  - action: utter_about_zoho_features
+
+
+- story: happy about product 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_product
+  - action: utter_about_zoho_books
+  - action: utter_about_zoho_services
+  - action: utter_about_zoho_features
+
+
+
+
+
+- story: happy product intro 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_about_zoho_books_plead
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_about_zoho_books
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

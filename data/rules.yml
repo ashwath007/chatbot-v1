@@ -1,0 +1,23 @@
+version: "3.0"
+
+rules:
+
+- rule: Say about book features
+  steps:
+  - intent: about_product_feature
+  - action: utter_about_zoho_features
+
+- rule: Say about book services
+  steps:
+  - intent: about_product_services
+  - action: utter_about_zoho_services
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

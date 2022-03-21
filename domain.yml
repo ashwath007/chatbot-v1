@@ -1,0 +1,54 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey! Welcome to Zoho Books, wanna know about it?"
+
+  utter_ask:
+  - text: "Wanna know about it?"
+
+  utter_about_zoho_books:
+  - text: "Zoho Books is a comprehensive cloud financial platform that takes care of your business finance. From core accounting, stock tracking, bank reconciliation, and managing projects, to automating workflows, and keeping your business GST compliant, Zoho Books does it all and more."
+
+  utter_about_zoho_books_plead:
+  - text: "We are begging you to learn about our product, please"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+# About the product res
+  utter_about_zoho_services:
+  - text: "End-to-end accounting \n GST compliance \n Integrated platform"
+
+  utter_about_zoho_features:
+  - text: """1. Receivables \n \t \t Keep the money coming in with Zoho Books. Send estimates, convert to GST invoices, and get paid online, on time.\n
+  2. Payables \n \t \t Stay on top of your payables and know where your money is going. From vendor bills to expenses, Zoho Books makes managing payables easy.
+  """
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
